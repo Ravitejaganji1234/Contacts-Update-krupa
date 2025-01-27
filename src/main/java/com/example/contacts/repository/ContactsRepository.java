@@ -9,4 +9,5 @@ public interface ContactsRepository {
     Contacts updateContacts(int contactId, Contacts contacts);
     void deleteContacts(int contactId); 
     List<Contacts> getContactsByCreatedBy(String contactCreatedEmployee);
+    List<Contacts> getContactsByEmployeeId(String employeeId);
 }

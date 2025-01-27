@@ -12,6 +12,8 @@ public class Contacts {
     int contactId;
     @Column (name="contactCreatedEmployee")
     String contactCreatedEmployee;
+    @Column (name="employeeId")
+    String employeeId;
     @Column (name="personName")
     String personName;
     @Column (name="relation")
@@ -67,6 +69,7 @@ public class Contacts {
         this.accountname=accountName;
         this.otherAccountInformation=otherAccountInformation;
         this.bankAddress=bankAddress;
+        this.employeeId=employeeId;
         
     }
 
@@ -84,6 +87,13 @@ public class Contacts {
     public void setContactCreatedEmployee(String contactCreatedEmployee){
         this.contactCreatedEmployee=contactCreatedEmployee;
     }
+
+    public String getEmployeeId(){return employeeId;};
+
+    public void setEmployeeId(String employeeId){
+        this.employeeId=employeeId;
+    };
+
     public String getPersonName(){
         return personName;
     }

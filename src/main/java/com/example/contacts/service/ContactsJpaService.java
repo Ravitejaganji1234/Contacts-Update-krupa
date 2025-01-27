@@ -48,6 +48,12 @@ public class ContactsJpaService implements ContactsRepository{
     public List<Contacts> getContactsByCreatedBy(String contactCreatedEmployee){
       return (List<Contacts>) contactsRepository.findByContactCreatedEmployeeOrderByPersonNameAsc(contactCreatedEmployee);
     }
+
+    @Override
+    public  List<Contacts> getContactsByEmployeeId(String employeeId){
+        return  (List<Contacts>) contactsRepository.findByEmployeeIdOrderByPersonNameAsc(employeeId);
+
+    }
     
 
     

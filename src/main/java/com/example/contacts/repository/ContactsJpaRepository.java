@@ -11,5 +11,6 @@ import java.util.List;
 
 public interface ContactsJpaRepository extends JpaRepository<Contacts, Integer>{
      List<Contacts> findByContactCreatedEmployeeOrderByPersonNameAsc(String contactCreatedEmployee);
+     List<Contacts> findByEmployeeIdOrderByPersonNameAsc(String employeeId);
      List<Contacts> findAllByOrderByPersonNameAsc();
 }

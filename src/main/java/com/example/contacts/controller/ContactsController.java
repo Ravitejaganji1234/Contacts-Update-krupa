@@ -13,7 +13,7 @@ import com.example.contacts.model.*;
 
   @RestController
 
-  @CrossOrigin
+  @CrossOrigin(origins = "http://localhost:3000")
   @RequestMapping("apis/employees/contacts")
 
 public class ContactsController {
@@ -34,6 +34,12 @@ public class ContactsController {
     @GetMapping("/contactsCreated/{contactCreatedEmployee}")
     public List<Contacts> getContactsByCreatedBy(@PathVariable String contactCreatedEmployee) {
         return  contactsService.getContactsByCreatedBy(contactCreatedEmployee);
+    }
+
+    @GetMapping("/contactsBy/{employeeId}")
+
+    public List<Contacts> getContactsByEmployeeId(@PathVariable String employeeId){
+        return  contactsService.getContactsByEmployeeId(employeeId);
     }
     
     
