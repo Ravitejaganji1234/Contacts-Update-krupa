@@ -13,7 +13,7 @@ import com.example.contacts.model.*;
 
   @RestController
 
-  @CrossOrigin(origins = "https://talebts-frontend.azurewebsites.net")
+  @CrossOrigin(origins ="https://talebts-frontend.azurewebsites.net")
   @RequestMapping("apis/employees/contacts")
 
 public class ContactsController {
